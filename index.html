@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head class="header">
   <title>Mayoor The Network ENGINEER</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="./nodemodules/demo.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -31,9 +32,9 @@
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="#">Merchandise</a></li>
+              <li><a href="#">Certifications</a></li>
               <li><a href="#">Extras</a></li>
-              <li><a href="#">Media</a></li>
+              <li><a href="#">portfolio</a></li>
             </ul>
           </li>
           <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
@@ -93,10 +94,10 @@
 
 
 <div id="about" class="container text-center">
-  <h2>NETWORK ENGINEER</h2>
+  <h2 class="title"><b>NETWORK ENGINEER</b></h2>
   <h4>MAYOOR RATHOD</h4>
   <p>(I am Working in crown as a IT help desk support.)</p>
-<p>Network engineer requirements include establishing, developing, and maintaining computer networks between organizations. They need to provide support to all users, including team members and clients and fix any issues that occur. They may also have to design new networks.
+<p class="list">Network engineer requirements include establishing, developing, and maintaining computer networks between organizations. They need to provide support to all users, including team members and clients and fix any issues that occur. They may also have to design new networks.
 
 Engineers provide support for system installation and define, document, and put into effect system standards. They secure network systems by setting up and applying policies, and define and oversees access.
 
@@ -126,7 +127,8 @@ Engineers choose the relevant data communications components and configure them 
         <p>CCNP (Cisco)</p>
         <p>They should have had experience in network security, LAN, and WAN. Engineers must be able to work.</p>
         <p>Employee from 2015</p>
-      </div>
+      </div></br>
+      <p1>click on images to see more</p1>
 
     </div>
     <div  class="col-sm-4">
@@ -138,24 +140,28 @@ Engineers choose the relevant data communications components and configure them 
         <p>Engineers should have solid analytical and problem-solving skills</p>
         <p>Employee From 2018</p>
       </div>
+     
       </div>
   </div></br>
 
   <!-- Container (Contact Section) -->
-  <div  id="con" class="container">
+  <div  id="con" >
     <div  class="cont">
-    <h3 class="text-center">Contact</h3>
-    <p class="text-center"><em>We love to help you!</em></p>
+      <br/>
+    <h2 style="color: white;font-family:Montserrat, sans-serif; ;" class="text-center">CONTACT MAYOOR</h2>
+    
+    <p class="text-center"></p></div>
 
     <div class="row">
       <div class="col-md-4">
-        <p>Fan? Drop a note.</p>
+        <p> <b>Drop a note.</b> <em>We love to help you!</em></p>
         <p><span class="glyphicon glyphicon-map-marker"></span>Perth WA, AUS</p>
         <p><span class="glyphicon glyphicon-phone"></span>Phone: +61 404965980</p>
         <p><span class="glyphicon glyphicon-envelope"></span>Email: mayoor.rathod@y7mail.com</p>
       </div>
       <div class="col-md-8">
         <div class="row">
+          <form id="myform" action="mailto:mayoor.rathod@y7mail.com" method="POST" enctype="multipart/form-data">
           <div class="col-sm-6 form-group">
             <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
           </div>
@@ -167,48 +173,29 @@ Engineers choose the relevant data communications components and configure them 
         <br>
         <div class="row">
           <div class="col-md-12 form-group">
-            <button class="btn pull-right" type="submit">Send</button>
-          </div>
+            <button class="btn pull-right" onmouseout="myFunction()" value="Reset form"type="submit">Send</button>
+          </div></form>
         </div>
       </div>
     </div>
   </div>
   </div>
+</div>
+<!-- Image of location/map -->
+<img src="./images/9.jpg" class="img-responsive" style="width:100%">
 
-<footer  class="text-center">
-  <img src="images/9.jpg" style="width:100%">
-  <a id="created" class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+<!-- Footer -->
+<footer class="text-center" id="created">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
-
-  <p>Made By Dhruvina Rathod<a href="https://webcodydhruvinarathod.wordpress.com/" data-toggle="tooltip" title="Visit webcodydhruvinarathod">Creation By https://webcodydhruvinarathod.wordpress.com/</a></p>
+  <p class="web">© 2019 - WEBSITE Creation by Dhruvinarathodwebcoder <a href="https://webcodydhruvinarathod.wordpress.com/portfolio/our-projects/" data-toggle="tooltip" title="Visit w3schools">https://webcodydhruvinarathod.wordpress.com</a></p> 
 </footer>
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
-  // Make sure this.hash has a value before overriding default behavior
-  if (this.hash !== "") {
+<script src="Script.js">
+ 
 
-    // Prevent default anchor click behavior
-    event.preventDefault();
 
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 900, function(){
-
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-      });
-    } // End if
-  });
-})
 </script>
 </body>
 </html>
